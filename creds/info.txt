@@ -1,0 +1,2 @@
+This is the location where your credentials file is expected to be located.
+It should be named `test.creds`.
