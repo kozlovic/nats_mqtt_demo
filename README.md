@@ -386,7 +386,7 @@ and they will produce the same outputs than with the standalone version.
 However, for the NATS subscription, we are going to have it connect to NGS instead of locally.
 
 ```
-8fe3dc6192e5:~# nats -s tls://connect.ngs.global --creds /home/mqtt_demo/creds/test.creds  sub "NATS.MQTT.Demo.Admin.>"
+8fe3dc6192e5:~# nats -s tls://connect.ngs.global --creds /home/mqtt_demo/creds/test.creds sub "NATS.MQTT.Demo.Admin.>"
 22:50:25 Subscribing on NATS.MQTT.Demo.Admin.>
 ```
 
@@ -449,4 +449,4 @@ This conclude the demonstration.
 
 As you can see, it is very easy to use NATS Server as a drop-in replacement of any MQTT broker. More importantly, we have shown how MQTT and NATS can exchange messages without the user having to do anything.
 
-Using a Leafnode, you can easily have a local server enabled with MQTT that can connect to a global NATS cluster (Synadia's [NGS](https://synadia.com/ngs) in this case) and have NATS applications (producers or consumers) anywhere in the world be able to interact with your MQTT applications.
+Using a Leafnode, you can easily have a local server enabled with MQTT that can connect to a global NATS cluster (Synadia's [NGS](https://synadia.com/ngs) in this case) and have NATS applications (producers or consumers) anywhere in the world be able to interact with your MQTT applications. Make the NATS subscriptions Geo Aware queue subscriptions and benefit from geographic failover. More information [here](https://nats.io/blog/nats-cli-pub-sub/).
